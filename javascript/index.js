@@ -64,38 +64,20 @@
 //   document.write(checkPass(password))
 
 
-// let visited = ['dubai','hamburg','stanbul','new york']
-// let cities2=['hamburg','berlin','new york']
-// function visitedCities(arrVisited,arr){
-// let temp =[]
-// for(i=0;i<arrVisited.length;i++){
-// for(j=0;j<arr.length;j++){
-//   if(arrVisited[i]==arr[j]){
-//     temp.push(arr[j])
-//   }
-// }
+let cities = ['hamburg','dubai','stanbul']
 
-// }if(temp.length==0){
-//   temp = `u have not visited any `
-// }
-// return temp
-// }
-// document.write(visitedCities(visited,cities2))
-//   console.log(visitedCities(visited,cities2))
-// function checkPrular(str){
-// if(str[str.length-1]=='s'){
-//   return 'prular'
-// }else{
-//  return 'not prular'
-// }
-// }
-// document.write(checkPrular('world')) 
-function checkguest(myName,guestName){
-  if(myName.length==guestName.length){
-    return 'u r invited'
-  }else{
-    return 'u r not invited'
+function visitedCities(city,arr){
+  let result =''
+  for(i=0;i<arr.length;i++){
+if(city==arr[i]){
+  result =`u have  visited ${city}`
+  break
+
+}else{
+  result = 'u did not'
+}
   }
+  return result
 }
 
-document.write(checkguest('jay','stef'))
+document.write(visitedCities('berlin',cities))
